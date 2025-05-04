@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 
 export async function sendToFlask(question, answer) {
   try {
-    const res = await fetch('https://nlp-cli-server.onrender.com/process', {
+    const res = await fetch('http://127.0.0.1:5001/process', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ question: question, answer: answer }),
